@@ -16,14 +16,14 @@ izvodiseod datetime,
 vaucer bit
 );
 
---create table grupe(
---sifra int,
---naziv varchar(20),
---brojslobodnihmjesta int,
---datumpocetka datetime,
---smjer int,
---predavac varchar(50)
---);
+create table grupe(
+sifra int not null primary key identity(1,1),
+naziv varchar(20) not null,
+brojslobodnihmjesta int not null,
+datumpocetka datetime,
+smjer int not null,
+predavac varchar(50)
+);
 
 --create table polaznici(
 --sifra int,
