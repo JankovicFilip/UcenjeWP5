@@ -25,13 +25,13 @@ smjer int not null,
 predavac varchar(50)
 );
 
---create table polaznici(
---sifra int,
---ime varchar(50),
---prezime varchar(50),
---email varchar(100),
---oib char(11)
---);
+create table polaznici(
+sifra int not null primary key identity(1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+email varchar(100),
+oib char(11)
+);
 
 --create table clanovi(
 --grupa int,
