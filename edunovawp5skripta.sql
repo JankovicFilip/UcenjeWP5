@@ -38,5 +38,6 @@ grupa int not null,
 polaznik int not null
 );
 
-
-
+alter table grupe add foreign key (smjer) references smjerovi(sifra);
+alter table clanovi add foreign key (grupa) references grupe(sifra);
+alter table clanovi add foreign key (polaznik) references polaznici(sifra);
