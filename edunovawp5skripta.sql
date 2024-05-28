@@ -33,10 +33,10 @@ email varchar(100),
 oib char(11)
 );
 
---create table clanovi(
---grupa int,
---polaznik int
---);
+create table clanovi(
+grupa int not null,
+polaznik int not null
+);
 
 
 
