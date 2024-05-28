@@ -14,18 +14,19 @@ username varchar(50) not null,
 password varchar(50) not null
 );
 
-create table shows(
+create table mediji(
 sifra int not null primary key identity(1,1),
 naziv varchar(50) not null,
 opis varchar(1000),
-komentar int not null
+vrsta varchar(20)
 );
 
 create table komentari(
 sifra int not null primary key identity(1,1),
 opis varchar(1000),
-korisnik int not null
+korisnik int not null,
+medij int not null
 );
 
-alter table shows add foreign key(komentar) references komentari(sifra);
+alter table komentari add foreign key(medij) references mediji(sifra);
 alter table komentari add foreign key(korisnik) references korisnici(sifra);
