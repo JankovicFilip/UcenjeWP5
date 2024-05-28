@@ -7,14 +7,14 @@ create database edunovawp5;
 go
 use edunovawp5;
 
---create table smjerovi(
---sifra int,
---naziv varchar(50),
---cijena decimal(18,2),
---brojsati int,
---izvodiseod datetime,
---vaucer bit
---);
+create table smjerovi(
+sifra int not null primary key identity(1,1),
+naziv varchar(50) not null,
+cijena decimal(18,2),
+brojsati int,
+izvodiseod datetime,
+vaucer bit
+);
 
 --create table grupe(
 --sifra int,
