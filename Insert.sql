@@ -21,3 +21,9 @@ values ('WP5',26,1);
 --2
 insert into grupe (naziv, brojslobodnihmjesta, smjer)
 values ('WD1',16,2);
+
+select * from polaznici;
+
+insert into polaznici (ime, prezime, email) values
+('Filip','Janković','filip.vno.jankovic@gmail.com'),
+('Hrvoje','Trdin','hthrvojetrdin@gmail.com');
