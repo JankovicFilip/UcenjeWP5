@@ -19,3 +19,13 @@
 select * from polaznici;
 update polaznici set oib = '07759048912' where sifra = 5;
 select * from polaznici;
+
+select * from grupe;
+
+--update grupe set smjer = 11 where sifra = 1;
+
+delete from smjerovi;
+
+delete from grupe;
+
+delete from clanovi;
