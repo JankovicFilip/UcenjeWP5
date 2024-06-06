@@ -18,7 +18,8 @@ create table mediji(
 sifra int not null primary key identity(1,1),
 naziv varchar(50) not null,
 opis varchar(1000),
-vrsta varchar(20)
+vrsta varchar(20),
+genre varchar(100)
 );
 
 create table komentari(
