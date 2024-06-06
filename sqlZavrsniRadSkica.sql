@@ -32,16 +32,17 @@ medij int not null
 alter table komentari add foreign key(medij) references mediji(sifra);
 alter table komentari add foreign key(korisnik) references korisnici(sifra);
 
---select * from korisnici;
+
 insert into korisnici (ime, prezime, username, password) values
 ('Milo', 'Schwartz', 'magpieluthien', '1234abcd'),
 ('Damien', 'Elis', 'woodchuckungol', 'abcd1234'),
 ('Addie', 'Hess', 'snailcirith', 'efgh5678'),
 ('Caitlyn', 'West', 'ibexedori', '1234'),
 ('Susan', 'Huber', 'widgeonent', 'abcd');
+select * from korisnici;
 
 
---select * from mediji;
+
 
 insert into mediji (naziv, opis, vrsta, genre) values
 ('The Dark Knight', 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.', 'Movie', 'Action, Crime, Drama'),
@@ -55,10 +56,13 @@ As the years pass, Frieren gradually realizes how her days in the hero''s party 
 Now in his third year of high school, Shouya is still plagued by his wrongdoings as a young boy. Sincerely regretting his past actions, he sets out on a journey of redemption: to meet Shouko once more and make amends.
 Koe no Katachi tells the heartwarming tale of Shouya''s reunion with Shouko and his honest attempts to redeem himself, all while being continually haunted by the shadows of his past.', 'Movie', 'Romance, Drama');
 
---select * from komentari;
+select * from mediji;
+
 
 insert into komentari ( opis, korisnik, medij) values 
 ('Best Batman movie, 10/10', 1, 1),
 ('Loved the acting of the main cast', 1, 3),
 ('So touching story, loved it', 5, 6),
 ('The character development is top notch from any media', 4, 5);
+
+select * from komentari;
