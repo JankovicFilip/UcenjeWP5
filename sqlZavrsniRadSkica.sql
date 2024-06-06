@@ -54,3 +54,11 @@ As the years pass, Frieren gradually realizes how her days in the hero''s party 
 ('Koe no Katachi', 'As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. However, when her mother notifies the school, he is singled out and blamed for everything done to her. With Shouko transferring out of the school, Shouya is left at the mercy of his classmates. He is heartlessly ostracized all throughout elementary and middle school, while teachers turn a blind eye.
 Now in his third year of high school, Shouya is still plagued by his wrongdoings as a young boy. Sincerely regretting his past actions, he sets out on a journey of redemption: to meet Shouko once more and make amends.
 Koe no Katachi tells the heartwarming tale of Shouya''s reunion with Shouko and his honest attempts to redeem himself, all while being continually haunted by the shadows of his past.', 'Movie', 'Romance, Drama');
+
+--select * from komentari;
+
+insert into komentari ( opis, korisnik, medij) values 
+('Best Batman movie, 10/10', 1, 1),
+('Loved the acting of the main cast', 1, 3),
+('So touching story, loved it', 5, 6),
+('The character development is top notch from any media', 4, 5);
