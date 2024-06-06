@@ -31,3 +31,13 @@ medij int not null
 
 alter table komentari add foreign key(medij) references mediji(sifra);
 alter table komentari add foreign key(korisnik) references korisnici(sifra);
+
+select * from korisnici;
+insert into korisnici (ime, prezime, username, password) values
+('Milo', 'Schwartz', 'magpieluthien', '1234abcd'),
+('Damien', 'Elis', 'woodchuckungol', 'abcd1234'),
+('Addie', 'Hess', 'snailcirith', 'efgh5678'),
+('Caitlyn', 'West', 'ibexedori', '1234'),
+('Susan', 'Huber', 'widgeonent', 'abcd');
+
+
