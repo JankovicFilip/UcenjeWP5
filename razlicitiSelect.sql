@@ -57,3 +57,10 @@ select * from polaznici where prezime like 'm%';
 select * from polaznici where sifra in (2,7,12,25);
 
 select * from polaznici where not sifra in (2,7,12,25);
+
+-- between
+-- umjesto >= and <=
+select * from polaznici where sifra between 2 and 8;
+
+-- na null vrijednosti se uvijek ide sa dva operator: is null ili is not null
+select * from smjerovi where izvodiseod is  not null;
