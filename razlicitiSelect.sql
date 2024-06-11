@@ -47,3 +47,13 @@ order by ime desc;
 -- distinct radi da ako ima 2 filipa, pokaze jednog
 select distinct ime from polaznici where ime like '%a%'
 order by ime desc;
+
+select * from polaznici where ime like '%a';
+
+select * from polaznici where prezime like 'm%';
+
+-- in
+-- umjesto da se pise or puno puta
+select * from polaznici where sifra in (2,7,12,25);
+
+select * from polaznici where not sifra in (2,7,12,25);
