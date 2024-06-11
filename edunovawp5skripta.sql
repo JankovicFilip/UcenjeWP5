@@ -44,7 +44,7 @@ alter table clanovi add foreign key (grupa) references grupe(sifra);
 alter table clanovi add foreign key(polaznik) references polaznici(sifra);
 
 
---select * from smjerovi;
+
 
 -- ŠKOLSKA SINTAKSA
 -- 1 -> ovo je šifra koju generira baza
@@ -60,7 +60,8 @@ insert into smjerovi values ('Web dizajn',1200,150,null,null);
 -- 3
 insert into smjerovi (naziv) values ('ČŠĆĐŽ čšćđž');
 
---select * from grupe;
+select * from smjerovi;
+
 -- 1
 insert into grupe(naziv,brojslobodnihmjesta,smjer)
 values ('WP5',26,1);
@@ -68,8 +69,9 @@ values ('WP5',26,1);
 insert into grupe(naziv,brojslobodnihmjesta,smjer)
 values ('WD1',16,2);
 
+select * from grupe;
 
---select * from polaznici;
+
 -- 1 - 30
 insert into polaznici (prezime, ime,email) values
 ('Trdin','Marina','mana2411@gmail.com'),
@@ -103,8 +105,9 @@ insert into polaznici (prezime, ime,email) values
 ('Varga','Danijela','danijelavarga.mail@gmail.com'),
 ('Boduljak','Sanja','matkosanja@gmail.com');
 
+select * from polaznici;
 
---select * from clanovi;
+
 insert into clanovi (grupa,polaznik) values
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),
 (1,11),(1,12),(1,13),(1,14),(1,15),(1,16),(1,17),(1,18),(1,19),(1,20),
@@ -112,3 +115,4 @@ insert into clanovi (grupa,polaznik) values
 
 insert into clanovi (grupa,polaznik) values
 (2,4),(2,8),(2,12),(2,16);
+select * from clanovi;
