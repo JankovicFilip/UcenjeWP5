@@ -2,7 +2,7 @@
 go
 drop database if exists zavrsniskica;
 go
-create database zavrsniskica;
+create database zavrsniskica collate Croatian_CI_AS;
 go
 use zavrsniskica;
 
