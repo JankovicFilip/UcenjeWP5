@@ -38,3 +38,14 @@ select distinct a.ime
 from Kupci a inner join Mjesta b
 on a.mjesto = b.sifra
 where b.naziv in('Osijek','Punitovci');
+
+select * from Artikli where cijena between 1000 and 1100
+order by 6 desc;
+
+-- 52601 artikala
+select count(*) from Artikli;
+
+select distinct artikl from ArtikliNaPrimci;
+
+select * from Artikli where
+sifra not in (select distinct artikl from ArtikliNaPrimci);
