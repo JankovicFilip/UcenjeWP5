@@ -28,4 +28,5 @@ order by 4;
 select a.naziv, count(b.polaznik) as polaznika
 from  grupe a inner join clanovi b
 on a.sifra = b.grupa
-group by a.naziv;
+group by a.naziv
+having count(b.polaznik) > 5;
