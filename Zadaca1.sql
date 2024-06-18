@@ -120,4 +120,30 @@ insert into cura (novcica,gustoca,ogrlica) values
 
 update cura set gustoca = 15.77;
 
+insert into mladic(suknja,kuna,extroventno,dukserica) values
+('Asd',17.55,0,'Bla'),
+('WASD',13.44,1,'Blaasd'),
+('DSA',13.55,1,'Blabla');
 
+delete from mladic where kuna > 15.78;
+
+select kratkamajica from zena where hlace like '%ana%';
+
+select dukserica from svekar;
+
+select a.dukserica, e.hlace
+from svekar a inner join sestra_svekar b
+on a.sifra = b.svekar
+inner join sestra c on b.sestra = c.sifra 
+inner join zena d on c.sifra = d.sestra
+inner join muskarac e on d.sifra = e.zena
+where d.hlace like '%a%' and c.haljina like '%ba%'
+order by 2 desc;
+
+
+select a.haljina, a.maraka
+from sestra a inner join sestra_svekar b
+on a.sifra = b.sestra
+inner join svekar c on c.sifra = b.svekar
+where
+a.sifra not in (select distinct b.sestra from sestra_svekar);
