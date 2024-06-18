@@ -34,10 +34,10 @@ group by a.naziv
 having min(c.kolicina*c.cijena) > 0
 order by 3 desc, 2 desc;
 
-select distinct a.ime
+select distinct a.ime, a.mjesto
 from Kupci a inner join Mjesta b
 on a.mjesto = b.sifra
-where b.naziv in('Osijek','Punitovci');
+where b.naziv = 'Osijek';
 
 select * from Artikli where cijena between 1000 and 1100
 order by 6 desc;
@@ -49,3 +49,16 @@ select distinct artikl from ArtikliNaPrimci;
 
 select * from Artikli where
 sifra not in (select distinct artikl from ArtikliNaPrimci);
+
+delete from Artikli where 
+sifra not in (select distinct artikl from ArtikliNaPrimci);
+
+
+insert into Kupci(ime,prezime,mjesto,jmbg) values
+('Filip','Janković',45691,'1605981302381');
+
+select naziv, count(*)
+from mjesta
+group by naziv
+having count(*)>1
+order by 2 desc;
