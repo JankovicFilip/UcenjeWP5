@@ -34,7 +34,7 @@ group by a.naziv
 having min(c.kolicina*c.cijena) > 0
 order by 3 desc, 2 desc;
 
-select a.*
+select distinct a.ime
 from Kupci a inner join Mjesta b
 on a.mjesto = b.sifra
 where b.naziv in('Osijek','Punitovci');
