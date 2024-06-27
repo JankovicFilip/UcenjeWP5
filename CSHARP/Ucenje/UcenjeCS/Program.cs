@@ -3,7 +3,9 @@
 using UcenjeCS;
 
 
-E02VarijableTipoviPodataka.Izvedi();
+E03UvjetnoGrananjeIf.Izvedi();
+
+//E02VarijableTipoviPodataka.Izvedi();
 
 
 //E01UlazIzlaz.Izvedi();
