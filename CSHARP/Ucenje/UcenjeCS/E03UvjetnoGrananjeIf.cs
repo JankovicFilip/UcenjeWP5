@@ -88,7 +88,30 @@ namespace UcenjeCS
                 Console.WriteLine("ako je prvi uvjet zadovoljen ulazi se u if");
             }
 
+            if (x == 3)
+            {
 
+                int k = 9;
+                if(i > 0)
+                {
+
+                    Console.WriteLine("zadovoljeno");
+                }
+            }
+
+            // inline if - tercijalni operator ? :
+            x = 0;
+            if (x == 0)
+            {
+                Console.WriteLine("ok");
+            }
+            else
+            {
+                Console.WriteLine("ne");
+            }
+            // preduvjet je da if i else provode istu akciju - u ovom slucaju cw
+
+            Console.WriteLine(x == 0 ? "ok" : "ne");
 
         }
 
