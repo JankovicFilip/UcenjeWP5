@@ -18,6 +18,36 @@ namespace UcenjeCS
 
             int[,] ciklicnaTablica = new int [red, stupac];
 
+            int umnozak =1, minstupac = 0, maxstupac = stupac - 1, minred = 0, maxred= red - 1;
+
+            while(umnozak <= red * stupac)
+            {
+                if(umnozak > red * stupac)
+                {
+                    break;
+                }
+                for(int i = maxstupac; i >= minstupac; i--)
+                {
+                    ciklicnaTablica[maxred, i] = umnozak;
+                    umnozak++;
+                }
+
+
+
+
+
+                for (int i = 0; i < red; i++)
+                {
+                    for (int j = 0; j < stupac; j++)
+                    {
+                        Console.Write(ciklicnaTablica[i, j]);
+                    }
+                    Console.WriteLine();
+                }
+
+
+
+            }
 
 
 
