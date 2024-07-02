@@ -16,74 +16,197 @@ namespace UcenjeCS
             Console.Write("Broj stupaca: ");
             int stupac = int.Parse(Console.ReadLine());
 
+            Console.Write("Početak tablice: dolje desno prema lijevo (dl), dolje desno prema gore (dg), gore desno prema lijevo(gd): ");
+            string pocetak = Console.ReadLine();
+
             int[,] ciklicnaTablica = new int [red, stupac];
 
             int umnozak =1, minstupac = 0, maxstupac = stupac - 1, minred = 0, maxred= red - 1;
-
-            while(umnozak <= red * stupac)
+            if (pocetak == "dl")
             {
-                if(umnozak > red * stupac)
+
+                while (umnozak <= red * stupac)
                 {
-                    break;
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxstupac; i >= minstupac; i--)
+                    {
+                        ciklicnaTablica[maxred, i] = umnozak;
+                        umnozak++;
+                    }
+
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxred - 1; i >= minred; i--)
+                    {
+                        ciklicnaTablica[i, minstupac] = umnozak;
+                        umnozak++;
+                    }
+
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minstupac + 1; i <= maxstupac; i++)
+                    {
+                        ciklicnaTablica[minred, i] = umnozak;
+                        umnozak++;
+                    }
+
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minred + 1; i < maxred; i++)
+                    {
+                        ciklicnaTablica[i, maxstupac] = umnozak;
+                        umnozak++;
+                    }
+                    maxred--;
+                    minstupac++;
+                    minred++;
+                    maxstupac--;
+
+
+
+
+
+
+
+
+
+
+
                 }
-                for(int i = maxstupac; i >= minstupac; i--)
+                for (int i = 0; i < red; i++)
                 {
-                    ciklicnaTablica[maxred, i] = umnozak;
-                    umnozak++;
+                    for (int j = 0; j < stupac; j++)
+                    {
+                        Console.Write(ciklicnaTablica[i, j] + "\t");
+                    }
+                    Console.WriteLine();
                 }
-                
-                if (umnozak > red*stupac)
-                {
-                    break;
-                }
-                for(int i = maxred - 1; i >= minred; i--)
-                {
-                    ciklicnaTablica[i,minstupac] = umnozak;
-                    umnozak++;
-                }
-                
-                if (umnozak > red * stupac)
-                {
-                    break;
-                }
-                for(int i = minstupac +1; i <= maxstupac; i++)
-                {
-                    ciklicnaTablica[minred,i] = umnozak;
-                    umnozak++;
-                }
-                
-                if (umnozak > red * stupac)
-                {
-                    break;
-                }
-                for (int i = minred + 1; i < maxred; i++)
-                {
-                    ciklicnaTablica[i,maxstupac] = umnozak;
-                    umnozak++;
-                }
-                maxred--;
-                minstupac++;
-                minred++;
-                maxstupac--;
-
-
-
-
-
-
-
-
-               
-
-
             }
-            for (int i = 0; i < red; i++)
+
+            if (pocetak == "dg")
             {
-                for (int j = 0; j < stupac; j++)
+
+
+                while (umnozak <= red * stupac)
                 {
-                    Console.Write(ciklicnaTablica[i, j] + "\t");
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxred; i >= minred; i--)
+                    {
+                        ciklicnaTablica[i, maxstupac] = umnozak;
+                        umnozak++;
+                    }
+
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxstupac - 1; i >= minstupac; i--)
+                    {
+                        ciklicnaTablica[minred, i] = umnozak;
+                        umnozak++;
+                    }
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minred + 1; i <= maxred; i++)
+                    {
+                        ciklicnaTablica[i, minstupac] = umnozak;
+                        umnozak++;
+                    }
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minstupac + 1; i <= maxstupac - 1; i++)
+                    {
+                        ciklicnaTablica[maxred, i] = umnozak;
+                        umnozak++;
+                    }
+
+                    minred++;
+                    maxstupac--;
+                    maxred--;
+                    minstupac++;
+
+
+
                 }
-                Console.WriteLine();
+                for (int i = 0; i < red; i++)
+                {
+                    for (int j = 0; j < stupac; j++)
+                    {
+                        Console.Write(ciklicnaTablica[i, j] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            if(pocetak == "gd")
+            {
+                while(umnozak <= red * stupac)
+                {
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxstupac; i >= minstupac; i--)
+                    {
+                        ciklicnaTablica[minred, i] = umnozak++;
+                    }
+                    minred++;
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minred; i <= maxred; i++)
+                    {
+                        ciklicnaTablica[i, minstupac] = umnozak++;
+                    }
+                    minstupac++;
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = minstupac; i <= maxstupac; i++)
+                    {
+                        ciklicnaTablica[maxred, i] = umnozak++;
+                    }
+                    maxred--;
+                    if (umnozak > red * stupac)
+                    {
+                        break;
+                    }
+                    for (int i = maxred; i >= minred; i--)
+                    {
+                        ciklicnaTablica[i, maxstupac] = umnozak++;
+                    }
+                    maxstupac--;
+                   
+                }
+
+                for (int i = 0; i < red; i++)
+                {
+                    for (int j = 0; j < stupac; j++)
+                    {
+                        Console.Write(ciklicnaTablica[i, j] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+
+
             }
 
 
