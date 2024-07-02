@@ -2,8 +2,8 @@
 
 using UcenjeCS;
 
-
-CiklicnaTablica.Izvedi();
+CiklicnaTablicaSwitch.Izvedi();
+//CiklicnaTablica.Izvedi();
 //E06ForPetlja.Izvedi();
 //E05Nizovi.Izvedi();
 //E04DZ4.Izvedi();

@@ -80,7 +80,13 @@ namespace UcenjeCS
 
 
 
+                }
 
+                if (red % 2 == 1 && stupac % 2 == 1)
+                {
+                    int middleRow = red / 2;
+                    int middleCol = stupac / 2;
+                    ciklicnaTablica[middleRow, middleCol] = red * stupac;
                 }
                 for (int i = 0; i < red; i++)
                 {
@@ -144,6 +150,15 @@ namespace UcenjeCS
 
 
                 }
+
+
+                if (red % 2 == 1 && stupac % 2 == 1)
+                {
+                    int middleRow = red / 2;
+                    int middleCol = stupac / 2;
+                    ciklicnaTablica[middleRow, middleCol] = red * stupac;
+                }
+
                 for (int i = 0; i < red; i++)
                 {
                     for (int j = 0; j < stupac; j++)
@@ -197,6 +212,14 @@ namespace UcenjeCS
 
                 }
 
+
+                if (red % 2 == 1 && stupac % 2 == 1)
+                {
+                    int middleRow = red / 2;
+                    int middleCol = stupac / 2;
+                    ciklicnaTablica[middleRow, middleCol] = red * stupac;
+                }
+
                 for (int i = 0; i < red; i++)
                 {
                     for (int j = 0; j < stupac; j++)
@@ -240,6 +263,14 @@ namespace UcenjeCS
 
 
 
+                }
+
+
+                if (red % 2 == 1 && stupac % 2 == 1)
+                {
+                    int middleRow = red / 2;
+                    int middleCol = stupac / 2;
+                    ciklicnaTablica[middleRow, middleCol] = red * stupac;
                 }
 
 
