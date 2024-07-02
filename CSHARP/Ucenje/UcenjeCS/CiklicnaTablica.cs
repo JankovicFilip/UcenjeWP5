@@ -16,7 +16,7 @@ namespace UcenjeCS
             Console.Write("Broj stupaca: ");
             int stupac = int.Parse(Console.ReadLine());
 
-            Console.Write("Početak tablice: dolje desno prema lijevo (dl), dolje desno prema gore (dg), gore desno prema lijevo(gd), gore lijeva u smjeru kazaljke na satu(gl): ");
+            Console.Write("Početak tablice: dolje desno prema lijevo (dl), dolje desno prema gore (dg), gore desno prema lijevo (gd), gore lijeva u smjeru kazaljke na satu (gl): ");
             string pocetak = Console.ReadLine();
 
             int[,] ciklicnaTablica = new int[red, stupac];
