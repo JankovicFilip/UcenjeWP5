@@ -81,7 +81,7 @@ namespace UcenjeCS
             {
                 for (int j = 0; j < stupac; j++)
                 {
-                    Console.Write(ciklicnaTablica[i, j]);
+                    Console.Write(ciklicnaTablica[i, j] + "\t");
                 }
                 Console.WriteLine();
             }
