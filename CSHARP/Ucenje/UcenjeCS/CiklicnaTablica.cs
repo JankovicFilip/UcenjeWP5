@@ -31,7 +31,8 @@ namespace UcenjeCS
                     ciklicnaTablica[maxred, i] = umnozak;
                     umnozak++;
                 }
-                if(umnozak > red*stupac)
+                
+                if (umnozak > red*stupac)
                 {
                     break;
                 }
@@ -40,6 +41,7 @@ namespace UcenjeCS
                     ciklicnaTablica[i,minstupac] = umnozak;
                     umnozak++;
                 }
+                
                 if (umnozak > red * stupac)
                 {
                     break;
@@ -49,6 +51,7 @@ namespace UcenjeCS
                     ciklicnaTablica[minred,i] = umnozak;
                     umnozak++;
                 }
+                
                 if (umnozak > red * stupac)
                 {
                     break;
@@ -58,23 +61,31 @@ namespace UcenjeCS
                     ciklicnaTablica[i,maxstupac] = umnozak;
                     umnozak++;
                 }
+                maxred--;
+                minstupac++;
+                minred++;
+                maxstupac--;
 
 
 
 
 
-                    for (int i = 0; i < red; i++)
-                {
-                    for (int j = 0; j < stupac; j++)
-                    {
-                        Console.Write(ciklicnaTablica[i, j]);
-                    }
-                    Console.WriteLine();
-                }
 
+
+
+               
 
 
             }
+            for (int i = 0; i < red; i++)
+            {
+                for (int j = 0; j < stupac; j++)
+                {
+                    Console.Write(ciklicnaTablica[i, j]);
+                }
+                Console.WriteLine();
+            }
+
 
 
 
