@@ -2,7 +2,11 @@
 
 using UcenjeCS;
 
-E04DZ2.Izvedi();
+
+
+E04DZ3.Izvedi();
+
+//E04DZ2.Izvedi();
 
 
 //E04DZ1.Izvedi();
