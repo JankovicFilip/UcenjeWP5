@@ -31,6 +31,15 @@ namespace UcenjeCS
                     ciklicnaTablica[maxred, i] = umnozak;
                     umnozak++;
                 }
+                if(umnozak > red*stupac)
+                {
+                    break;
+                }
+                for(int i = maxred - 1; i >= minred; i--)
+                {
+                    ciklicnaTablica[i,minstupac] = umnozak;
+                    umnozak++;
+                }
 
 
 
