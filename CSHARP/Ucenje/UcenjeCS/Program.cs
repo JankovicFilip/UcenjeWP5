@@ -3,8 +3,9 @@
 using UcenjeCS;
 
 
+E04DZ4.Izvedi();
 
-E04DZ3.Izvedi();
+//E04DZ3.Izvedi();
 
 //E04DZ2.Izvedi();
 
