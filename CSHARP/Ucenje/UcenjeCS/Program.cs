@@ -2,7 +2,10 @@
 
 using UcenjeCS;
 
-E04DZ1.Izvedi();
+E04DZ2.Izvedi();
+
+
+//E04DZ1.Izvedi();
 
 //E04Z1.Izvedi();
 //E04UvjetnoGrananjeSwitch.Izvedi();
