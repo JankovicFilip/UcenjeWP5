@@ -266,13 +266,7 @@ namespace UcenjeCS
                 }
 
 
-                if (red % 2 == 1 && stupac % 2 == 1)
-                {
-                    int middleRow = red / 2;
-                    int middleCol = stupac / 2;
-                    ciklicnaTablica[middleRow, middleCol] = red * stupac;
-                }
-
+                
 
 
 
