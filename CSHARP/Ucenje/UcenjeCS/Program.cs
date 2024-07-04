@@ -6,9 +6,9 @@ using UcenjeCS;
 
 
 
-
-
-E09ForEachPetlja.Izvedi();
+E10Z1.Izvedi();
+//E10TryCatch.Izvedi();
+//E09ForEachPetlja.Izvedi();
 //E08DoWhilePetlja.Izvedi();
 //E07WhilePetlja.Izvedi();
 //CiklicnaTablicaSwitch.Izvedi();
