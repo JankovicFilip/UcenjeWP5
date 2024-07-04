@@ -2,7 +2,16 @@
 
 using UcenjeCS;
 
-CiklicnaTablicaSwitch.Izvedi();
+
+
+
+
+
+
+E09ForEachPetlja.Izvedi();
+//E08DoWhilePetlja.Izvedi();
+//E07WhilePetlja.Izvedi();
+//CiklicnaTablicaSwitch.Izvedi();
 //CiklicnaTablica.Izvedi();
 //E06ForPetlja.Izvedi();
 //E05Nizovi.Izvedi();
