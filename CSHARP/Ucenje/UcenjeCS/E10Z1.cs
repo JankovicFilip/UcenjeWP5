@@ -10,7 +10,7 @@ namespace UcenjeCS
     {
         public static void Izvedi()
         {
-            int broj;
+            int[] broj = new int[0];
             int suma = 0;
             while (true)
             {
@@ -19,13 +19,13 @@ namespace UcenjeCS
                 try
                 {
 
-                    broj = int.Parse(Console.ReadLine());
-                    if (broj <= 0 || broj > 1000)
+                    int broj1 = int.Parse(Console.ReadLine());
+                    if (broj1 <= 0 || broj1 > 1000)
                     {
                         Console.WriteLine("Broj mora biti izmedu 1 i 1000!");
                         continue;
                     }
-                    
+                    broj = new int[broj1];
 
                     
                     break;
@@ -37,12 +37,15 @@ namespace UcenjeCS
                     Console.WriteLine("Niste unijeli broj!");
                 }
             }
-            for (int i = broj; i % 2 == 0;)
+            foreach (int broj1 in broj)
             {
-                
-                suma += i;
+                suma += broj1;
             }
-            Console.WriteLine(suma);
+            Console.WriteLine("Sum: " + suma);
+            foreach (int broj1 in broj)
+            {
+                Console.WriteLine(broj1);
+            }
             
 
             int[] brojevi = new int[10];
