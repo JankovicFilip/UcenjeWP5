@@ -2,8 +2,8 @@
 
 using UcenjeCS;
 
-
-E01Z4.Izvedi();
+E11Metode.Izvedi();
+//E01Z4.Izvedi();
 //E06Z1.Izvedi();
 //E0501.Izvedi();
 //E07Z2.Izvedi();
