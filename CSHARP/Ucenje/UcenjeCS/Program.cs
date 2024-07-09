@@ -4,7 +4,8 @@ using UcenjeCS;
 
 
 
-E12Rekurzija.Izvedi();
+E12LjubavniKalkulator.Izvedi();
+//E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();
 //E11Metode.Izvedi();
 //E01Z4.Izvedi();
