@@ -9,6 +9,10 @@ namespace UcenjeCS
     internal class E11Metode
     {
 
+        /// <summary>
+        /// U ovoj klasi ucimo rad sa metodama
+        /// </summary>
+
         public static void Izvedi()
         {
             Console.WriteLine("Hello E11!");
@@ -31,7 +35,19 @@ namespace UcenjeCS
             {
                 Console.WriteLine(SlucajnaRijec());
             }
-            
+
+
+            Console.WriteLine(SumaBrojeva(3, 23));
+            Console.WriteLine(SumaBrojeva(1, 100));
+            Console.WriteLine(SumaBrojeva(100, 1));
+
+            int[] brojevi = { 2, 2, 2, 2, 2, 3 };
+            Console.WriteLine(SumaBrojeva(brojevi));
+
+            int redova = UcitajCijeliBroj("Unesi broj redova: ", 2, 100);
+            int stupaca = UcitajCijeliBroj("Unesi broj stupaca: ", 2, 100);
+
+            // ja sam siguran ovdje da redovi i stupci imaju vrijednosti 2 i 100
 
         }
 
@@ -56,8 +72,8 @@ namespace UcenjeCS
 
         private static void Tip2(int x = 2) // opcionalni parametri, doda se zadana vrijednost = 2
         {
-            Console.WriteLine("Metoda je primila parametar tipa integer s vrijednoscu {0} ",x);
-            for(int i = 0; i < x; i++)
+            Console.WriteLine("Metoda je primila parametar tipa integer s vrijednoscu {0} ", x);
+            for (int i = 0; i < x; i++)
             {
                 Console.WriteLine(i);
             }
@@ -72,7 +88,7 @@ namespace UcenjeCS
 
             Console.WriteLine("Preopterecena s stringom vrijednoscu: {0}", ime);
         }
-        
+
         private static void Tip2(string ime, int b)
         {
             Console.WriteLine("Metoda primila {0} i {1} ", ime, b);
@@ -95,17 +111,88 @@ namespace UcenjeCS
             char[] niz = new char[8];
 
             var r = new Random();
-            for(int i = 0; i < niz.Length; i++)
+            for (int i = 0; i < niz.Length; i++)
             {
-                niz[i] = (char)r.Next(65,90);
+                niz[i] = (char)r.Next(65, 90);
             }
 
 
 
 
-            return string.Join("",niz);
+            return string.Join("", niz);
 
 
+        }
+
+
+        // trenutno nama najzanimljiviji Tip4
+        // metoda je odredenog tipa (vraca vrijednost) i prima parametre
+
+        // dokumentiranje metode
+        /// <summary>
+        /// Metoda vraca zbroj svih brojeva izmedu dva primljena broja bez obzira koji je manji, a koji veci
+        /// </summary>
+        /// <param name="b1"></param>
+        /// <param name="b2"></param>
+        /// <returns>Vraca zbroj brojeva izmedu dva primljena broja</returns>
+
+        private static int SumaBrojeva(int b1, int b2)
+        {
+            int suma = 0;
+            int min = b1 < b2 ? b1 : b2;
+            int max = b1 > b2 ? b1 : b2;
+            for (int i = min; i <= max; i++)
+            {
+                suma += i;
+            }
+
+
+
+            return suma;
+
+        }
+
+
+        // zbraja elemente niza
+        private static int SumaBrojeva(int[] niz)
+        {
+            var suma = 0;
+
+            foreach (var b in niz)
+            {
+
+                suma += b;
+            }
+
+
+            return suma;
+        }
+
+
+
+        public static int UcitajCijeliBroj(string poruka = "Unesi broj: ", int min = 0, int max = 1000)
+        {
+            int broj = 0;
+
+            while(true)
+            {
+                Console.WriteLine(poruka);
+                try
+                {
+                    broj = int.Parse(Console.ReadLine());
+                    if(broj < min || broj > max)
+                    {
+                        Console.WriteLine("Broj mora biti u rasponu {0} i {1}", min, max);
+                        continue;
+                    }
+                    return broj;
+
+                }
+                catch
+                {
+                    Console.WriteLine("Nisi unio broj!");
+                }
+            }
         }
 
 
