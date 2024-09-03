@@ -14,6 +14,8 @@ namespace UcenjeCS.E15KlasaObjekt
 
 
             Console.WriteLine("Hello oop!");
+
+            // objekt je pojavnost klase iliti instanca klase
         }
     }
 }
