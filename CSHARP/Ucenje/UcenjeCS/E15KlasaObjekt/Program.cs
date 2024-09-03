@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,11 +27,28 @@ namespace UcenjeCS.E15KlasaObjekt
             osoba = new Osoba(); // konstruiranje objekta - rađa se / kreira se, zauzima memoriju
             osoba.Ime = "Pero"; // objekt zivi i posjeduje vrijednost - postavljamo ih
 
+            osoba.Prezime = "Perija";
             Console.WriteLine(osoba.Ime); // tu se vrijednosti konzumiraju
+
+            Console.WriteLine(osoba.ImePrezime()); // metoda imePrezime nije staticna jer nju zovem na objektu (Osoba)
 
 
             // na kraju objekt (osoba) umire - unistava ga/cisti iz memorije
             // mi ne unistavamo objekt, to radi garbage collector
+
+            // drugi nacini kreiranja objekta
+
+            Osoba ravnatelj = new Osoba
+            {
+                Sifra = 1,
+                Ime = "Marko",
+                Prezime = "Marec"
+            };
+            
+            var
+
+
         }
+        
     }
 }

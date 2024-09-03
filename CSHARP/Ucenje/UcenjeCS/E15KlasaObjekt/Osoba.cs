@@ -20,6 +20,10 @@ namespace UcenjeCS.E15KlasaObjekt
 
 
         // klasa sadrzi metode
+        public string ImePrezime()
+        {
+            return Ime + " " + Prezime;
+        }
 
 
 
