@@ -2,8 +2,8 @@
 
 using UcenjeCS;
 
-
-E13Vjezbanje.Izvedi();
+UcenjeCS.E15KlasaObjekt.Program.Izvedi();
+//E13Vjezbanje.Izvedi();
 //E12LjubavniKalkulator.Izvedi();
 //E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();
