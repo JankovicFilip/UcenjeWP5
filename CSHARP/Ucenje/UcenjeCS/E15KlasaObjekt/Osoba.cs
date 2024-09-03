@@ -15,6 +15,7 @@ namespace UcenjeCS.E15KlasaObjekt
         public string? Ime { get; set; } // ? upitnik oznacava da ime moze biti null
         public string? Prezime { get; set; }
 
+        public Mjesto? Mjesto { get; set; }
 
 
 
