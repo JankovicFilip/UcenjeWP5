@@ -59,6 +59,7 @@ namespace UcenjeCS.E16NasljedivanjePolimorfizam
             var predavac = new Predavac() { Sifra = 1, Ime = "Marko" };
 
             Console.WriteLine("{0} - {1}", polaznik,predavac);
+            predavac = new Predavac(2, "Ana", "Mak", "HR3333333");
 
 
             //var e = new Entitet(); // apstraktna klasa se ne moze isntancirati
