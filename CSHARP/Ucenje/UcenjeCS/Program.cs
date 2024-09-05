@@ -2,7 +2,11 @@
 
 using UcenjeCS;
 
-UcenjeCS.E15KlasaObjekt.Program.Izvedi();
+new UcenjeCS.E16NasljedivanjePolimorfizam.Program();
+
+//new UcenjeCS.E16NasljedivanjePolimorfizam.Program("Edunova"); // ovo poziva drugi konstruktor sa vrijednosti string
+
+//UcenjeCS.E15KlasaObjekt.Program.Izvedi();
 //E13Vjezbanje.Izvedi();
 //E12LjubavniKalkulator.Izvedi();
 //E12Rekurzija.Izvedi();

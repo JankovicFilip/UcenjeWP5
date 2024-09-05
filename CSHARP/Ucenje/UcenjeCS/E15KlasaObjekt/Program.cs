@@ -20,7 +20,7 @@ namespace UcenjeCS.E15KlasaObjekt
 
             // objekt je pojavnost klase iliti instanca klase
 
-            // Osoba je ime klase
+            // Osoba je ime klase --- opisnik objekta
             // osoba je ime objekta (instanca, pojavnost) - varijabla
 
             //Osoba osoba = new Osoba();
