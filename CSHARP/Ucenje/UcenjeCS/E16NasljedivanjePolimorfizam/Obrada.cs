@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E16NasljedivanjePolimorfizam
 {
-    internal abstract class Osoba : Entitet
+    internal abstract class Obrada
     {
-        public string? Ime { get; set; }
-        public string? Prezime { get; set; }
-
-
-
-
+        public abstract void Procesuiraj();
 
     }
 }

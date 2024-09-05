@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E16NasljedivanjePolimorfizam
 {
-    internal abstract class Osoba : Entitet
+    internal class ObradaUlaznihRacuna : Obrada
     {
-        public string? Ime { get; set; }
-        public string? Prezime { get; set; }
-
-
-
-
-
+        public override void Procesuiraj()
+        {
+            Console.WriteLine("Plati preko banke!");
+        }
     }
 }
