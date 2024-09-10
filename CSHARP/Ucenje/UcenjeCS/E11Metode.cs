@@ -176,7 +176,7 @@ namespace UcenjeCS
 
             while(true)
             {
-                Console.WriteLine(poruka);
+                Console.Write(poruka + ": ");
                 try
                 {
                     broj = int.Parse(Console.ReadLine());
