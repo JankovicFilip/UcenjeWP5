@@ -2,7 +2,9 @@
 
 using UcenjeCS;
 
-new UcenjeCS.E16NasljedivanjePolimorfizam.Program();
+
+new UcenjeCS.E17GenericiLambdaExtenzije.Program();
+//new UcenjeCS.E16NasljedivanjePolimorfizam.Program();
 
 //new UcenjeCS.E16NasljedivanjePolimorfizam.Program("Edunova"); // ovo poziva drugi konstruktor sa vrijednosti string
 
