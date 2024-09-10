@@ -30,9 +30,10 @@ namespace UcenjeCS.E17GenericiLambdaExtenzije
 
             List<Smjer> smjerovi = new List<Smjer>();
 
-            smjerovi.Add(new Smjer() { Sifra = 1, Naziv = "WP5" });
+            smjerovi.Add(new Smjer() { Sifra = 11, Naziv = "WP5" });
 
             smjerovi.Add(new() { Sifra = 7, Naziv = "RR" });
+            smjerovi.Add(new() { Sifra = 9, Naziv = "PHP" });
 
             Console.WriteLine(smjerovi[1].Sifra);
 
@@ -48,14 +49,72 @@ namespace UcenjeCS.E17GenericiLambdaExtenzije
             o2.Obradi();
 
             List<DateTime> datum = new List<DateTime>();
-            datum.Add(new DateTime (1993, 11, 11 ));
+            datum.Add(new DateTime(1993, 11, 11));
             datum.Add(DateTime.Now);
 
             Console.WriteLine(datum[0]);
 
 
+            // lambda izrazi
+            Console.WriteLine(KlasicnaMetoda(2, 3));
+
+            var Zbroj = (int x, int y) => x + y;
+
+            Console.WriteLine(Zbroj(2, 3));
+
+            var Algoritam = (int x, int y) =>
+            {
+                var t = x + 1;
+                return t - y;
+            };
+            Console.WriteLine(Algoritam(2, 3));
+
+            
+            var parni = (int x) => x % 2 == 0; 
+            
+            Console.WriteLine(parni(4));
+
+            // extenzije
+
+            var s = "Osijek";
+            Console.WriteLine(s.LastOrDefault());
+
+            Console.WriteLine(gradovi.LastOrDefault());
+
+            Console.WriteLine(smjerovi.LastOrDefault());
+
+            smjerovi[0].OdradiPosao();
+            o2.ObjektObrade.OdradiPosao(); //polaznici
+            o1.PrikazRadaSSuceljem();
+            o2.ObjektObrade.PrikazRadaSSuceljem();
+            smjerovi[0].PrikazRadaSSuceljem();
+
+            smjerovi.Sort();
+            Console.WriteLine(smjerovi.FirstOrDefault()?.Sifra); // icomparable extenzija
+
+            // bez koristenja implementacije sucelja IComparable
+            smjerovi.Sort((s1,s2) => s1.Naziv.CompareTo(s2.Naziv));
+
+            Console.WriteLine(smjerovi.FirstOrDefault().Naziv);
+
+            o1.ListaZaObradu = smjerovi;
+            o1.IspisStavaka(TuMeOdradi);
+            o1.IspisStavaka(s =>
+            {
+                Console.WriteLine("I bez poziva metode " + s.Naziv);
+            });
+        }
+
+        public void TuMeOdradi(Smjer s)
+        {
+            Console.WriteLine("Obradujem u programu smjer s pozivom metode " + s.Naziv);
+        }
 
 
+
+        public int KlasicnaMetoda(int x, int y)
+        {
+            return x + y;
         }
     }
 }

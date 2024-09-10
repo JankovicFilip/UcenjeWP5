@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E17GenericiLambdaExtenzije
 {
-    internal class Smjer : Entitet
+    internal class Smjer : Entitet,ISucelje,IComparable<Smjer>
     {
 
        
         public  string? Naziv { get; set; }
 
+        public int CompareTo(Smjer? other)
+        {
+            return Sifra == other?.Sifra ? 0 : Sifra > other?.Sifra ? 1 : -1;
+        }
 
+        public void Posao()
+        {
+            Console.WriteLine("Odradujem posao na smjeru!");
+        }
     }
 }
