@@ -11,7 +11,7 @@ namespace EdunovaAPP.Models
         public int? Trajanje { get; set; }
         public decimal? Cijena { get; set; }
         public DateTime? IzvodiSeOd { get; set; }
-        public bool? vaucer { get; set; }
+        public bool? Vaucer { get; set; }
 
     }
 }
