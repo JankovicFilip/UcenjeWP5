@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EdunovaAPP.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EdunovaAPP.Data
 {
@@ -12,6 +13,8 @@ namespace EdunovaAPP.Data
 
 
         }
+
+        public DbSet<Smjer> Smjerovi { get; set; }
 
     }
 }
