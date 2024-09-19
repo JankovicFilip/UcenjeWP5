@@ -1,4 +1,4 @@
-namespace WebAPI
+namespace EdunovaAPP
 {
     public class WeatherForecast
     {

@@ -13,11 +13,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI( opcije =>
-    {
-        opcije.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
-        opcije.EnableTryItOutByDefault();
-    } );
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
